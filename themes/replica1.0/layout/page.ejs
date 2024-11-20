@@ -1,0 +1,7 @@
+<%- partial('_partial/header') %>
+<% if(page.title === 'tags'){ %>
+<%- list_tags() %>
+<% } %>
+<% if(page.title === 'categories'){ %>
+<%- list_categories() %>
+<% } %>

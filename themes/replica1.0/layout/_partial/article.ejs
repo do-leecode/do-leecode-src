@@ -1,0 +1,16 @@
+<%
+var publishDate = page.date.format('YYYY-MM-DD HH:mm:ss')
+%>
+<div class="boxed-group" xmlns="http://www.w3.org/1999/html">
+  <h3>
+    <i class="fa fa-user"></i>
+     <a><%= config.author || '' %></a>
+    <span>
+      <i class="fa fa-pencil"></i> Published: <%= publishDate %>
+    </span>
+  </h3>
+  <article>
+    <h1><%= page.title || 'Untitle' %></h1>
+    <%- page.content %>
+  </article>
+</div>

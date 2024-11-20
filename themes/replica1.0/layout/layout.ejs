@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="<%= config.language || '' %>">
+<%- partial('_partial/head') %>
+<body>
+<%- partial('_partial/navbar') %>
+<main class="container">
+  <%- body %>
+</main>
+<%- partial('_partial/footer') %>
+<%- partial('_partial/script') %>
+</body>
+</html>
