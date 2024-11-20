@@ -2,4 +2,4 @@ public/
 node_modules/
 db.json
 .token
-themes/*/.git
+#themes/*/.git
