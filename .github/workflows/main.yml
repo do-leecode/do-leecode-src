@@ -2,17 +2,16 @@ name: deploying Hexo project to GitHub pages
 on:
   push:
     branches:
-      - main # 分支有 push 行为时就触发这个 action
+      - main 
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      GITHUB_USER: "do-leecode"
-      # GitHub Pages仓库 即博客部署需要用到的仓库
-      DEPLOY_REPO: "do-leecode.github.io"
+      GITHUB_USER: do-leecode
+      DEPLOY_REPO: do-leecode.github.io
       DEPLOY_BRANCH: main
-      GIT_USER: "do-leecode"
+      GIT_USER: do-leecode
       GIT_EMAIL: 626692024@qq.com
     steps:
       - name: Checkout
@@ -24,7 +23,6 @@ jobs:
       - name: Set timezone to Asia/Shanghai
         uses: szenius/set-timezone@v1.0
         with:
-          # 设置执行环境的时区为 Linux 上海时区
           timezoneLinux: "Asia/Shanghai"
 
       - name: Echo current time
