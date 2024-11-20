@@ -9,6 +9,12 @@ author: reganzm
 language: zh-CN
 timezone: Asia/Shanghai
 
+  # URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://do-leecode.github.com/tech
+root: /tech/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
 
 # Directory
 source_dir: source
@@ -78,6 +84,7 @@ disqus: # DISQUS ID
 location: ChengDu
 email: 626692024@qq.com
 
+avatar: https://avatars2.githubusercontent.com/u/5300359?v=4&s=460
 social:
   github: https://github.com/reganzm
   知识星球: Offer快来
