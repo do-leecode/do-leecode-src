@@ -47,14 +47,14 @@ jobs:
       
       - name: Pull blog repo && Copy files
         run: |
-          git clone https://github.com/${{GITHUB_USER}}/${{DEPLOY_REPO}}.git
-          rm -rf ${{DEPLOY_REPO}}/*
-          cp -r ./public/* ./${{DEPLOY_REPO}}
+          git clone https://github.com/do-leecode/do-leecode.github.io.git
+          rm -rf do-leecode.github.io/*
+          cp -r ./public/* ./do-leecode.github.io/
 
       - name: Deploy blog
         run: |
-          echo '>_ Enter repo: ${{GITHUB_USER}}/${{DEPLOY_REPO}} ...'
-          cd ${{DEPLOY_REPO}}
+          echo '>_ Enter repo: do-leecode/do-leecode.github.io ...'
+          cd do-leecode.github.io
           echo '>_ Pwd current dir ...'
           pwd
           echo '>_ Show files ...'
@@ -62,10 +62,10 @@ jobs:
           echo '>_ Set remote git ...'
           rm -rf .git
           git init
-          git remote add origin https://${{secrets.DO_LEECODE_SRC_TOKEN}}@github.com/${{GITHUB_USER}}/${{DEPLOY_REPO}}.git
-          git branch -M ${{DEPLOY_BRANCH}}
+          git remote add origin https://${{secrets.DO_LEECODE_SRC_TOKEN}}@github.com/do-leecode/do-leecode.github.io.git
+          git branch -M main
           git add .
           echo '>_ Start Commit ...'
           git commit --allow-empty -m "Github Action Automated Deployment $(date +'%Y-%m-%d %H:%M:%S')"
           echo '>_ Start Push ...'
-          git push -u origin ${{DEPLOY_BRANCH}} --force
+          git push -u origin do-leecode.github.io --force
