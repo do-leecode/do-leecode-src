@@ -8,11 +8,11 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      GITHUB_USER: do-leecode
+      GITHUB_USER: "do-leecode"
       # GitHub Pages仓库 即博客部署需要用到的仓库
-      DEPLOY_REPO: do-leecode.github.io
+      DEPLOY_REPO: "do-leecode.github.io"
       DEPLOY_BRANCH: main
-      GIT_USER: do-leecode
+      GIT_USER: "do-leecode"
       GIT_EMAIL: 626692024@qq.com
     steps:
       - name: Checkout
