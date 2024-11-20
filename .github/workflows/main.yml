@@ -62,7 +62,7 @@ jobs:
           echo '>_ Set remote git ...'
           rm -rf .git
           git init
-          git remote add origin https://${{secrets.DEPLOY_TOKEN}}@github.com/${{GITHUB_USER}}/${{DEPLOY_REPO}}.git
+          git remote add origin https://${{secrets.DO_LEECODE_SRC_TOKEN}}@github.com/${{GITHUB_USER}}/${{DEPLOY_REPO}}.git
           git branch -M ${{DEPLOY_BRANCH}}
           git add .
           echo '>_ Start Commit ...'
