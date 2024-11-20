@@ -8,8 +8,8 @@ description: 手撕Leecode
 author: reganzm
 language: zh-CN
 timezone: Asia/Shanghai
-
-  # URL
+favicon: https://assets-cdn.github.com/favicon.ico
+# URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://do-leecode.github.io
 root: /
