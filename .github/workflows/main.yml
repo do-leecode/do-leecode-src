@@ -36,6 +36,8 @@ jobs:
       - name: Generate pages
         run: |
           export TZ='Asia/Shanghai'
+          git config --global user.email "626692024@qq.com"
+          git config --global user.name "reganzm"
           npm install --save
           npm install hexo-cli -g
           hexo clean && hexo g && hexo d
