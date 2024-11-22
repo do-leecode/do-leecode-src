@@ -7,15 +7,26 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_USER: do-leecode
-      DEPLOY_REPO: do-leecode.github.io
-      DEPLOY_BRANCH: main
-      GIT_USER: do-leecode
-      GIT_EMAIL: 626692024@qq.com
+      #env:
+      #GITHUB_USER: do-leecode
+      #DEPLOY_REPO: do-leecode.github.io
+      #DEPLOY_BRANCH: main
+      #GIT_USER: do-leecode
+      #GIT_EMAIL: 626692024@qq.com
       # 本地.ssh文件下的私钥id_rsa，存在secrets的PRIVATE_KEY中
-      SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+      #SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
     steps:
+      env:
+        GITHUB_USER: do-leecode
+        DEPLOY_REPO: do-leecode.github.io
+        DEPLOY_BRANCH: main
+        GIT_USER: do-leecode
+        GIT_EMAIL: 626692024@qq.com
+        # 本地.ssh文件下的私钥id_rsa，存在secrets的PRIVATE_KEY中
+        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+
+
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -37,46 +48,6 @@ jobs:
 
       - name: Generate pages
         run: |
-          export SSH_PRIVATE_KEY: "
-            -----BEGIN OPENSSH PRIVATE KEY-----
-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
-r6m4w/woRalDcAAAAKcm9vdEBvc2xhYgE=
------END OPENSSH PRIVATE KEY-----
-            "
           export TZ='Asia/Shanghai'
           git config --global init.defaultBranch main
           git config --global user.email "626692024@qq.com"
