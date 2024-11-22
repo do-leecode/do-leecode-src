@@ -75,7 +75,7 @@ menu:
       url: /photo
       type: 1  # 跳转类型 1：站内异步跳转
     github:
-      on: false
+      on: true
       url: https://github.com/reganzm
       type: 3  # 跳转类型 3：打开新的tab页
 
@@ -96,7 +96,7 @@ miit:
 reward: true
 # true 开启打赏功能
 
-searchAll: false
+searchAll: true
 # true 启用全文搜索
 # 开启此功能需要下面操作：
 # 1. 在 hexo 根目录 执行 npm install hexo-generator-search --save 安装插件
@@ -106,10 +106,10 @@ searchAll: false
 #   field: post
 
 
-copyright: false
+copyright: true
 # Copyright info. of post | 文末版权信息
 
-word_count: false
+word_count: true
 # true 开启字数统计
 # 开启此功能需要安装插件 ：在 hexo根目录 执行npm i hexo-wordcount --save
 
