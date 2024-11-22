@@ -81,7 +81,7 @@ marked:
 deploy:
      type: git
      #repo: git@github.com:do-leecode/do-leecode.github.io.git
-     repo: https://github.com/do-leecode/do-leecode.github.io.git
+     repo: https://github.com/do-leecode/do-leecode.github.io
      token: {{secrets.TOKEN}}  
      branch: main
 
