@@ -16,17 +16,6 @@ jobs:
       # 本地.ssh文件下的私钥id_rsa，存在secrets的PRIVATE_KEY中
       #SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
     steps:
-      env:
-        GITHUB_USER: do-leecode
-        DEPLOY_REPO: do-leecode.github.io
-        DEPLOY_BRANCH: main
-        GIT_USER: do-leecode
-        GIT_EMAIL: 626692024@qq.com
-        # 本地.ssh文件下的私钥id_rsa，存在secrets的PRIVATE_KEY中
-        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-
-
-
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -47,6 +36,14 @@ jobs:
           node-version: 18.19.1
 
       - name: Generate pages
+        env:
+          GITHUB_USER: do-leecode
+          DEPLOY_REPO: do-leecode.github.io
+          DEPLOY_BRANCH: main
+          GIT_USER: do-leecode
+          GIT_EMAIL: 626692024@qq.com
+          # 本地.ssh文件下的私钥id_rsa，存在secrets的PRIVATE_KEY中
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: |
           export TZ='Asia/Shanghai'
           git config --global init.defaultBranch main
