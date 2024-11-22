@@ -31,41 +31,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16.15.0
+          node-version: 18.19.1
 
       - name: Generate pages
         run: |
           export TZ='Asia/Shanghai'
-          npm install -g hexo-cli hexo
-          npm install
-          hexo clean && hexo g
+          npm install --save
+          hexo clean && hexo g && hexo d
       
-      - name: Git config
-        run: |
-          git config --global user.name "do-leecode"
-          git config --global user.email "626692024@qq.com"
-      
-      - name: Pull blog repo && Copy files
-        run: |
-          git clone https://github.com/do-leecode/do-leecode.github.io.git
-          rm -rf do-leecode.github.io/*
-          cp -r ./public/* ./do-leecode.github.io
-
-      - name: Deploy blog
-        run: |
-          echo '>_ Enter repo: do-leecode/do-leecode.github.io ...'
-          cd do-leecode.github.io
-          echo '>_ Pwd current dir ...'
-          pwd
-          echo '>_ Show files ...'
-          ls -al
-          echo '>_ Set remote git ...'
-          rm -rf .git
-          git init
-          git remote add origin https://${{secrets.DO_LEECODE_SRC_TOKEN}}@github.com/do-leecode/do-leecode.github.io.git
-          git branch -M main
-          git add .
-          echo '>_ Start Commit ...'
-          git commit --allow-empty -m "Github Action Automated Deployment $(date +'%Y-%m-%d %H:%M:%S')"
-          echo '>_ Start Push ...'
-          git push -u origin main --force
