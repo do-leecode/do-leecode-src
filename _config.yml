@@ -33,7 +33,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -101,3 +101,10 @@ social:
 # flagcounter
 flagcounter_href: # https://info.flagcounter.com/xxxx
 flagcounter_img_src: # https://s01.flagcounter.com/xxxx
+
+syntax_highlighter: highlight.js
+prismjs:
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
