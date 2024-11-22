@@ -80,9 +80,9 @@ marked:
 
 deploy:
      type: git
-     #repo: git@github.com:do-leecode/do-leecode.github.io.git
-     repo: https://github.com/do-leecode/do-leecode.github.io
-     token: {{secrets.TOKEN}}  
+     repo: git@github.com:do-leecode/do-leecode.github.io.git
+     #repo: https://do-leecode@github.com/do-leecode/do-leecode.github.io.git
+     #token: {{secrets.TOKEN}}  
      branch: main
 
 gcs: # GOOGLE CUSTOM SEARCH
