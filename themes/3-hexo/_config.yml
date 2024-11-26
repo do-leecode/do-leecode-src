@@ -75,7 +75,7 @@ menu:
       url: /photo
       type: 1  # 跳转类型 1：站内异步跳转
     github:
-      on: true
+      on: false
       url: https://github.com/reganzm
       type: 3  # 跳转类型 3：打开新的tab页
 
@@ -124,7 +124,7 @@ visit_counter:
 ##########自定义样式设置##############
 # Table of contents | 文章目录
 toc:
-  max_depth: 3  # 1 - 6 (h1-h6) 目录最大级数
+  max_depth: 4  # 1 - 6 (h1-h6) 目录最大级数
 
 #文章列表 鼠标移上去的样式, 为空时使用默认效果
 article_list:
@@ -142,7 +142,7 @@ article_bg_img:
   opacity: 0.3 # 背景图透明度，范围 0 ～ 1
 
 # 列表样式
-list: normal
+list: thread
 # normal : 普通样式
 # thread : 列表外圈有一个线框
 
@@ -170,14 +170,14 @@ img_resize: default
 
 # 代码段高亮样式，markdown 语法 `demo`
 code:
-  theme: dark-red
+  theme: github
 # 支持主题：
 # dark-red: 红字(默认)
 # github: github样式（灰色底，黑字）
 
 highlight:
   on: true # true开启代码高亮，开启需要关闭博客 _config.yml 中的 highlight
-  lineNum: false # true显示行号
+  lineNum: true # true显示行号
   copy: true # 复制功能
   theme: github
 # 代码高亮主题,效果可以查看 https://highlightjs.org/static/demo/

@@ -107,9 +107,9 @@ social:
 flagcounter_href: # https://info.flagcounter.com/xxxx
 flagcounter_img_src: # https://s01.flagcounter.com/xxxx
 
-syntax_highlighter: highlight.js
-prismjs:
-  preprocess: true
-  line_number: true
-  line_threshold: 0
-  tab_replace: ""
+# syntax_highlighter: highlight.js
+# prismjs:
+#   preprocess: true
+#   line_number: true
+#   line_threshold: 0
+#   tab_replace: ""
